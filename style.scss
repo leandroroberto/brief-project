@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+// Reset
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+// Variáveis
+
+/* Cores */
+
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+$blue: hsl(248, 32%, 49%);
+$dark-blue: hsl(249, 10%, 26%);
+$grayish-blue: hsl(246, 25%, 77%);
+$white: white;
+
+
+.container {
+    background: url('/img/bg-intro-desktop.png') no-repeat;
+    background-color: $red;
+    background-blend-mode: darken;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    opacity: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container-content {
+        width: 65%;
+        height: 70%;
+        display: flex;
+        padding: 3rem;
+
+        .content-left {
+            display: flex;
+            flex-direction: column;
+            color: $white;
+            width: 50%;
+            height: 100%;
+            justify-content: center;
+
+            h1 {
+                font-size: 3rem;
+            }
+        }
+
+        .form {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+
+            .style {
+                outline: none;
+                padding: 1rem;
+                border-radius: 6px;
+            }
+
+            #tryforfree {
+                font-size: 1rem;
+                color: $white;
+                margin-bottom: 1rem;
+                background-color: $blue;
+                border: none;
+                box-shadow: 0 .4rem rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+                transition: .3s ease-in-out;
+            }
+
+            #tryforfree:hover {
+                background-color: hsl(248, 37%, 41%);
+            }
+
+            .form-content {
+                display: flex;
+                flex-direction: column;
+                background-color: $white;
+                border-radius: 6px;
+                padding: 1rem;
+                box-shadow: 0 .4rem rgba(0, 0, 0, 0.2);
+
+                .inputUser {
+                    margin: .7rem 0;
+                    border: 1px solid $grayish-blue;
+                    font-weight: 700;
+                }
+
+                #show-password {
+                    width: 100%;
+                    height: .5rem;
+                    position: relative;
+                }
+
+                #icon-pass {
+                    color: $grayish-blue;
+                    font-size: 1.7rem;
+                    cursor: pointer;
+                    position: absolute;
+                    right: 1rem;
+                    bottom: 2.1rem;
+                }
+
+                #btn-submit {
+                    font-size: 1rem;
+                    color: $white;
+                    margin-bottom: 1rem;
+                    background-color: $green;
+                    border: none;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    cursor: pointer;
+                    transition: .3s ease-in-out;
+                }
+
+                #btn-submit:hover {
+                    background-color: hsl(154, 57%, 40%);
+                }
+
+                p {
+                    text-align: center;
+                    padding: .3rem;
+                    font-size: .7rem;
+                    color: $grayish-blue;
+
+                    span {
+                        font-weight: 600;
+                        color: $red;
+                        font-size: .8rem;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Resolução 375px
+
+@media screen and (max-width: 376px) {
+    .container {
+        height: 100vh;
+
+        .container-content {
+            width: 90%;
+            height: 100vh;
+            flex-direction: column;
+            padding: 1rem;
+
+            .content-left {
+                width: 100%;
+
+                h1 {
+                    width: 100%;
+                    font-size: 1.5rem;
+                    text-align: center;
+                    margin-bottom: .5rem;
+                }
+
+                p {
+                    text-align: center;
+                    font-size: .8rem;
+                }
+            }
+
+            .form {
+                width: 100%;
+                flex-direction: column;
+
+                .form-content {
+                    height: 27rem;
+
+                    #btn-submit {
+                        font-size: .8rem;
+                        margin-bottom: 0;
+                    }
+
+                    #icon-pass {
+                        font-size: 1.4rem;
+                        right: 1rem;
+                        bottom: 1.7rem;
+                    }
+                }
+
+                #tryforfree {
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+
+}
